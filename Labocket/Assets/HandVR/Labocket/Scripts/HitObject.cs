@@ -12,7 +12,14 @@ public class HitObject : MonoBehaviour
         {
             if (collision.gameObject.name == "BTB")
             {
-                btb.materials[2].color = Color.red;
+                for(int i = 0; i < 10 ; i++){
+                    //btb.materials[2].color = Color.red;
+                    StartCoroutine(DilayMethod(0.5f , () =>
+                    {
+                        //rbga, r:0->1, g:1->0
+                        btb.materials[2].color = new Color(0.1f * (i+1), 0.0f, 1.0f - 0.1f * (i+1), 1.0f);
+                    }));
+                }
             }
             else if (collision.gameObject.name == "NAOH")
             {
@@ -23,7 +30,14 @@ public class HitObject : MonoBehaviour
         {
             if (collision.gameObject.name == "BTB")
             {
-                btb.materials[2].color = Color.blue;
+                //btb.materials[2].color = Color.blue;
+                for(int i = 0; i < 10; i++){
+                    StartCoroutine(DilayMethod(0.5f , () =>
+                    {
+                        //rbga, r:0->1, b:1->0
+                        btb.materials[2].color = new Color(0.0f, 0.1f * (i+1), 1.0f - 0.1f * (i+1), 1.0f);
+                    }));
+                }
             }
             else if (collision.gameObject.name == "HCL")
             {
