@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CanCarryObject : MonoBehaviour, IControlObject
 {
-    public Color FocusedColor = Color.yellow;
-    public Color GrabColor = Color.red;
+    //public Color FocusedColor = Color.yellow;
+    //public Color GrabColor = Color.red;
 
     Material material_;
-    Color defaultColor_;
+    //Color defaultColor_;
     Rigidbody rigidbody_;
 
     HashSet<HandVRSphereHand.EitherHand> focusHands_ = new HashSet<HandVRSphereHand.EitherHand>();
@@ -20,7 +20,7 @@ public class CanCarryObject : MonoBehaviour, IControlObject
     void Start()
     {
         material_ = GetComponent<Renderer>().material;
-        defaultColor_ = material_.color;
+        //defaultColor_ = material_.color;
         rigidbody_ = GetComponent<Rigidbody>();
 
         targetTransformParent_ = new GameObject().transform;
@@ -31,27 +31,27 @@ public class CanCarryObject : MonoBehaviour, IControlObject
 
     public void StartFocus(HandVRSphereHand.EitherHand hand)
     {
-        if (focusHands_.Count == 0)
-        {
-            material_.color = FocusedColor;
-        }
+        //if (focusHands_.Count == 0)
+        //{
+        //    material_.color = FocusedColor;
+        //}
         focusHands_.Add(hand);
     }
 
     public void EndFocus(HandVRSphereHand.EitherHand hand)
     {
         focusHands_.Remove(hand);
-        if (focusHands_.Count == 0)
-        {
-            material_.color = defaultColor_;
-        }
+        //if (focusHands_.Count == 0)
+        //{
+        //    material_.color = defaultColor_;
+        //}
     }
 
     public void StartGrab(HandVRSphereHand.EitherHand hand, Vector3 centerPosition)
     {
         if (grabHands_.Count == 0)
         {
-            material_.color = GrabColor;
+            //material_.color = GrabColor;
 
             targetTransformParent_.position = centerPosition;
             targetTransformParent_.LookAt(transform);
@@ -69,17 +69,17 @@ public class CanCarryObject : MonoBehaviour, IControlObject
     public void EndGrab(HandVRSphereHand.EitherHand hand)
     {
         grabHands_.Remove(hand);
-        if (grabHands_.Count == 0)
-        {
-            if (focusHands_.Count > 0)
-            {
-                material_.color = FocusedColor;
-            }
-            else
-            {
-                material_.color = defaultColor_;
-            }
-        }
+        //if (grabHands_.Count == 0)
+        //{
+        //    if (focusHands_.Count > 0)
+        //    {
+        //        material_.color = FocusedColor;
+        //    }
+        //    else
+        //    {
+        //        material_.color = defaultColor_;
+        //    }
+        //}
     }
 
     void FixedUpdate()

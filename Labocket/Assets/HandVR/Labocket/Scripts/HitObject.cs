@@ -4,12 +4,31 @@ using UnityEngine;
 
 public class HitObject : MonoBehaviour
 {
-    public bool hit = false;
+    public MeshRenderer btb;
+
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Atom")
+        if (this.name == "HCL")
         {
-            hit = true;
+            if (collision.gameObject.name == "BTB")
+            {
+                btb.materials[2].color = Color.red;
+            }
+            else if (collision.gameObject.name == "NAOH")
+            {
+                //だめ
+            }
+        }
+        else if (this.name == "NAOH")
+        {
+            if (collision.gameObject.name == "BTB")
+            {
+                btb.materials[2].color = Color.blue;
+            }
+            else if (collision.gameObject.name == "HCL")
+            {
+                //だめ
+            }
         }
     }
 }

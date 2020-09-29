@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465907b2ceb5f3946bf99eb54148240e, type: 3}
+  m_Name: Nitrogen
+  m_EditorClassIdentifier: 
+  JPName: "\u7A92\u7D20"
+  USName: Nitrogen
+  Symbol: N
+  Num: 7
+  State: 2
+  Description: "\u5927\u6C17\u4E2D\u306B78.08\uFF05\u542B\u307E\u308C\u308B\u5143\u7D20\u3002\u30A2\u30DF\u30CE\u9178\u3084\u305F\u3093\u3071\u304F\u8CEA\u3001DNA\u306A\u3069\u4F53\u3092\u3064\u304F\u308B\u6210\u5206\u306B\u5FC5\u8981\u4E0D\u53EF\u6B20\u3067\u3042\u308B\u3002\u307E\u305F\u3001\u304A\u3088\u305D-196\u2103\u306E\u6DB2\u4F53\u7A92\u7D20\u306F\u51B7\u5374\u5264\u3068\u3057\u3066\u7528\u3044\u3089\u308C\u308B\u3053\u3068\u3082\u3042\u308B\u3002"
+  Purpose: "\u30A2\u30DF\u30CE\u9178\u3001\u305F\u3093\u3071\u304F\u8CEA\u3001DNA\u3001\u51B7\u5374\u5264(\u6DB2\u4F53\u7A92\u7D20\u3068\u3057\u3066)\u306A\u3069"
+  Connection: "\u7A92\u7D20\uFF0B\u6C34\u7D20\u2192\u30A2\u30F3\u30E2\u30CB\u30A2(N\u2082
+    + 3H\u2082 \u2192 NH\u2083)"
