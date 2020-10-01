@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/HandVR/Labocket/Scenes/Title.unity
     guid: 72d497a7ad17e7e41a7ba2215d9578f5
   - enabled: 1
-    path: Assets/HandVR/Labocket/Scenes/sanoMain.unity
+    path: Assets/HandVR/Labocket/Scenes/Main.unity
     guid: b1ab73e55f2f54dcd96a568da31ee712
   - enabled: 1
     path: Assets/HandVR/Labocket/Scenes/sanoMenu.unity

@@ -93,6 +93,7 @@
     <Compile Include="Assets\Hospital Laboratory Interior\Scripts\RotateMoveCamera.cs" />
     <None Include="Assets\Hospital Laboratory Interior\Readme.txt" />
     <None Include="Assets\HandVR\HandVR\Plugins\iOS\このディレクトリについて.txt" />
+    <None Include="Assets\HandVR\Labocket\Materials\chromakeyShader.shader" />
     <None Include="Assets\StreamingAssets\palm_detection_labelmap.txt" />
     <Reference Include="Unity.XR.Management">
       <HintPath>/Users/yusuke/Documents/Labocket/Labocket/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>

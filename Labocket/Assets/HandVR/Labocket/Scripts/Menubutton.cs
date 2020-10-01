@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 
 public class Menubutton : MonoBehaviour{
+    void Start()
+    {
+        XRSettings.enabled = false;
+    }
+
     public void ToTitle(){
         SceneManager.LoadScene("Title");
     }
@@ -59,8 +65,16 @@ public class Menubutton : MonoBehaviour{
             case "J3":
                 LG = "J3";
                 break;
+            case "tutorial":
+                LG = "tutorial";
+                XRSettings.enabled = true;
+                SceneManager.LoadScene("Main");
+                break;
         }
-        SceneManager.LoadScene("LabMenu");
+        if (LG != "tutorial")
+        {
+            SceneManager.LoadScene("LabMenu");
+        }
     }
 
     
